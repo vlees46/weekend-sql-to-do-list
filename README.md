@@ -16,23 +16,23 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     -- Actually make some CREATE TABLE statements.
   * Make a new git branch for "initializing" stuff.
 
-  * Add files and folders to project directory.
-    * Don't forget .gitignore!
+ - [x]  Add files and folders to project directory.
+ - [x]  Don't forget .gitignore!
 
   ##### Front-End:
-    * Mock up the basic HTML
-    * Source CSS and JS files
+  - [x]  Mock up the basic HTML
+  - [x]  Source CSS and JS files
 
   ##### Back-End:
-    * run npm init
-    * make sure "start" script exists in our package.json
-    * npm install the stuff we need
-      * express
-      * pg
-    * use Postico to make a database
-    * use Postico to create "todos" table
-    * implement minimum code for working Express server in server.js
-    * wire up database connection in pool.js file
+ - [x] run npm init
+ - [x] make sure "start" script exists in our package.json
+ - [x] npm install the stuff we need
+ - [x] express
+ - [x] pg
+ - [x] use Postico to make a database
+ - [x] use Postico to create "todos" table
+ - [x] implement minimum code for working Express server in server.js
+ - [x]    * wire up database connection in pool.js file
 
 ---
 

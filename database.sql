@@ -1,22 +1,15 @@
-Database Name: KoalaHolla
+Database Name: todo
 
-CREATE TABLE "koalas" (
+CREATE TABLE "tasklist" (
 	"id" SERIAL PRIMARY KEY,
-	"name" VARCHAR (50) NOT NULL,
-	"gender" VARCHAR (1) NOT NULL,
-    "age" INT NOT NULL,
-    "ready_to_transfer"  VARCHAR (1),
-	"notes" VARCHAR (100)
+	"task" VARCHAR (100) NOT NULL,
+	
 );
 
-INSERT INTO "koalas" 
-	("name", "gender", "age", "ready_to_transfer", "notes") 
+INSERT INTO "tasklist" 
+	("task") 
 VALUES 
-	('Scotty', 'M', '4', 'Y', 'Born in Guatemala'),
-    ('Jean', 'F', '5', 'Y', 'Allergic to lots of lava'),
-    ('Ororo', 'F', '7', 'N', 'Loves listening to Paula (Abdul)'),
-    ('Logan', 'M', '15', 'N', 'Love the sauna'),
-    ('Charlie', 'M', '9', 'Y', 'Favorite band is Nirvana'),
-    ('Betsy', 'F', '4', 'Y', 'Has a pet iguana');
+	('Take out the trash'),
+    ('Mow the lawn');
 
-SELECT * FROM "koalas";
+SELECT * FROM "tasklist";

@@ -24,7 +24,7 @@ header {
 }
 
 /* Table styles */
-#koala-table {
+#task-table {
     text-align: center;
 }
 table {
@@ -46,12 +46,12 @@ th, td {
 }
 
 /* Input styles */
-#addKoala {
+#addTasks {
     display: flex;
     justify-content: center;
     gap: 5px;
 }
-#addButton {
+#addTaskButton {
     padding: 10px;
     border-radius: 10px;
     background-color: #0b8eab;
