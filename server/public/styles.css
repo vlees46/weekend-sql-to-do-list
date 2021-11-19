@@ -9,7 +9,7 @@ img {
 }
 
 header {
-    background-color: #0b8eab;
+    background-color: #b8bbbb;
     color: white;
     padding: 15px;
     border: 2px solid #04323a;
@@ -30,13 +30,13 @@ header {
 table {
     display: inline-block;
     border-collapse: collapse;
-    background-color: #e7f7fa;
+    background-color: #d2d6d6;
     animation-name: fadeIn;
     animation-duration: 4.5s;
     animation-fill-mode: both;
 }
 table, th, td {
-    border: 1px solid #385a60;
+    border: 1px solid #606161;
   }
 th {
     height: 50px;
@@ -54,9 +54,9 @@ th, td {
 #addTaskButton {
     padding: 10px;
     border-radius: 10px;
-    background-color: #0b8eab;
+    background-color: #c6cbcc;
     color: white;
-    border-color: #04323a;
+    border-color: #646464;
     font-size: 15px;
     margin-left: 1rem;
 }
@@ -77,15 +77,15 @@ input[type=text] {
 }
 
 .update-btn {
-    background-color: #378a9c;
+    background-color: #b0b2b3;
     color: white;
     border-radius: 15px;
     border-color: #04323a;
     padding: 5px;
 }
 
-/* Animations */
+/* Animations 
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
-}
+}*/

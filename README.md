@@ -46,10 +46,18 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] delete task in database
 - [x] re-render DOM
 
-  * complete a task
+- [ ] complete a task Front - End
+    - [ ] background of the task container could change from gray to green
+    - [ ] The complete option should be  'checked off'
+- [ ] complete a task Back -End
+    - [ ] Whether or not a Task is complete should also be stored in the database
+
+
     * update task in db
     * should be "checked off"
     * CSS to differentiate
     * re-render DOM
+
+    For example, the background of the task container could change from gray to green. The complete option should be  'checked off'. Each of these are accomplished in CSS, but will need to hook into logic to know whether or not the task is complete.
 
   * CSS! make it purdy

@@ -1,12 +1,10 @@
-console.log( 'js' );
-
 $( document ).ready( function(){
   console.log( 'JQ' ); 
   // load existing todos on page load
   getTodo();
     // TODO make sure to add class delete-btn, to the remove button.
   $('#viewTasks').on('click', '.delete-btn', deleteTask);
-  //$('#viewTasks').on('click', '.update-btn', updateKoala);
+  $('#viewTasks').on('click', '.update-btn', updateComplete);
   $('#addTaskButton').on('click', postTodo);
 
 }); // end doc ready
@@ -29,12 +27,13 @@ function getTodo(){
       $('#viewTasks').append(`
       <tr>
         <td>${todos.task}</td>
+        <td>${todos.completed}</td>
            <td>
           <button class="update-btn" data-id="${todos.id}">Completed</button>
         </td> 
         <td>
           <button class="delete-btn" data-id="${todos.id}">Delete</button>
-        </td>
+        </td>        
       </tr>
       `);
     }
@@ -72,18 +71,18 @@ function postTodo(){
   }).catch(function(error) {
     console.log('error: ', error);
   });
-}; // end deleteKoala
-/*
-// update the inputs
-function updateKoala(){
+}; // end deletetasiki
+
+// update the complete tasks
+function updateComplete(){
   const update = $(this).data('id');
   $.ajax({
-    type: 'PUT',
-    url: `/koalas/${update}`
-  }).then((res) => {
-    console.log(res);
-    getKoalas();
-  }).catch((err) => {
-    console.log(err);
-  }) */
-/* }; // end updateKoala */
+    method: 'PUT',
+    url: `/todo/${update}`    
+  }).then(function(response) {
+    console.log(response);
+    getTodo();
+  }).catch(function(error) {
+    console.log(error);
+  }) ;
+ }; // end updateComplete
