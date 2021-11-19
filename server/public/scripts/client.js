@@ -2,45 +2,38 @@ console.log( 'js' );
 
 $( document ).ready( function(){
   console.log( 'JQ' ); 
-  // load existing koalas on page load
-  getKoalas();
+  // load existing todos on page load
+  getTodo();
     // TODO make sure to add class delete-btn, to the remove button.
-  $('#viewKoalas').on('click', '.delete-btn', deleteKoala);
-  $('#viewKoalas').on('click', '.update-btn', updateKoala);
-  $('#addButton').on('click', saveKoala);
+  //$('#viewKoalas').on('click', '.delete-btn', deleteKoala);
+  //$('#viewKoalas').on('click', '.update-btn', updateKoala);
+  //$('#addButton').on('click', saveKoala);
 
 }); // end doc ready
 
 // clear koalaInputs
 function clearInputs(){
-  $('#nameIn').val('');
-  $('#ageIn').val('');
-  $('#genderIn').val('');
-  $('#readyForTransferIn').val('');
-  $('#notesIn').val('');
+  $('#taskIn').val('');
+
 }
 
-function getKoalas(){ 
-  console.log( 'in getKoalas' );
+function getTodo(){ 
+  console.log( 'in getTodo' );
   $.ajax({
     type: 'GET',
-    url: '/koalas'
+    url: '/todo'
   }).then((response) => {
-    $('#viewKoalas').empty();
-    console.log("GET /koalas response", response);
-    for (let koala of response) {
-      $('#viewKoalas').append(`
+    $('#viewTasks').empty();
+    console.log("GET /todos response", response);
+    for (let todos of response) {
+      $('#viewTasks').append(`
       <tr>
-        <td>${koala.name}</td>
-        <td>${koala.age}</td>
-        <td>${koala.gender}</td>
-        <td>${koala.ready_to_transfer}</td>
-        <td>${koala.notes}</td>
+        <td>${todos.task}</td>
+           <td>
+          <button class="update-btn" data-id="${todos.id}">Completed</button>
+        </td> 
         <td>
-          <button class="update-btn" data-id="${koala.id}">Ready for Transfer</button>
-        </td>
-        <td>
-          <button class="delete-btn" data-id="${koala.id}">delete</button>
+          <button class="delete-btn" data-id="${todos.id}">Delete</button>
         </td>
       </tr>
       `);

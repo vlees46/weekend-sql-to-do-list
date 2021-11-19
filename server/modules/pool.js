@@ -1,7 +1,7 @@
 const pg = require('pg');
 
 const config = {
-  database: 'KoalaHolla', 
+  database: 'todo', 
   user: 'postgres',          // Might have to comment out for MAC
   password: ' ',             // Might have to comment out for MAC
   host: 'localhost', 

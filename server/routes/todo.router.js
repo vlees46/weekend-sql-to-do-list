@@ -1,14 +1,15 @@
 const express = require('express');
-const koalaRouter = express.Router();
+const todoRouter = express.Router();
 const pool = require('../modules/pool');
 
 // DB CONNECTION
 
 
 // GET
-koalaRouter.get('/', (req, res) => {
-    console.log('GET /koalas');
-    const sqlText = 'SELECT * FROM "koalas";';
+todoRouter.get('/', (req, res) => {
+    console.log('GET /todos');
+    const sqlText = 'SELECT * FROM "tasklist";';
+    console.log('in Router todo file', sqlText);
     pool.query(sqlText)
     .then((dbResult) => {
         console.log(`${dbResult.rows.length} rows to send.`)
@@ -92,4 +93,4 @@ koalaRouter.delete('/:id', (req, res) => {
     })
 }); */
 
-module.exports = koalaRouter;
+module.exports =todoRouter;
