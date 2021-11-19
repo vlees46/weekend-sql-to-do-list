@@ -21,27 +21,23 @@ todoRouter.get('/', (req, res) => {
     });
 });
 
-/* // POST
-koalaRouter.post('/', (req, res) => {
-    console.log('POST /koalas');
+// POST
+todoRouter.post('/', (req, res) => {
+    console.log('POST /todo');
     console.log('req.body:', req.body);
-    const newKoala = req.body;
+    const newTaskItem = req.body;
     const sqlText = `
-      INSERT INTO "koalas"
-        ("name", "age", "gender", "ready_to_transfer", "notes")
+      INSERT INTO "tasklist"
+        ("task")
       VALUES
-        ($1, $2, $3, $4, $5);
+        ($1);
     `;
     const sqlValues = [
-      newKoala.name,
-      newKoala.age,
-      newKoala.gender,
-      newKoala.ready_to_transfer,
-      newKoala.notes
+      newTaskItem.task
     ];
     pool.query(sqlText, sqlValues)
     .then((dbResult) => {
-        console.log('\tINSERT succeeded.');
+        console.log('\todo INSERT succeeded.');
         res.sendStatus(201);
     })
     .catch((dbErr) => {
@@ -50,7 +46,7 @@ koalaRouter.post('/', (req, res) => {
     });
 });
 
-// PUT
+/* PUT
 koalaRouter.put('/:id', (req, res) => {
   console.log('req.params:', req.params);
   const update = req.params.id;
@@ -70,9 +66,9 @@ koalaRouter.put('/:id', (req, res) => {
     }).catch((dbErr) => {
       res.sendStatus(500);
     })
-})
+}) */
 
-// DELETE
+/* DELETE
 // Bennett was here
 koalaRouter.delete('/:id', (req, res) => {
   console.log('req.params:', req.params);

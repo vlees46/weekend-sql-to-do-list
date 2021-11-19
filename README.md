@@ -38,13 +38,13 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 # FEATURES
 
-  * create a task
-    * store in db
-    * re-render DOM
+- [x] create a task
+- [x] store new task in database
+- [x] re-render DOM
 
-  * delete a task
-    * delete task in db
-    * re-render DOM
+- [ ] delete a task
+- [ ] delete task in database
+- [ ] re-render DOM
 
   * complete a task
     * update task in db

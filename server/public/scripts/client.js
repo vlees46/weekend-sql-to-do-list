@@ -7,7 +7,7 @@ $( document ).ready( function(){
     // TODO make sure to add class delete-btn, to the remove button.
   //$('#viewKoalas').on('click', '.delete-btn', deleteKoala);
   //$('#viewKoalas').on('click', '.update-btn', updateKoala);
-  //$('#addButton').on('click', saveKoala);
+  $('#addTaskButton').on('click', postTodo);
 
 }); // end doc ready
 
@@ -41,28 +41,24 @@ function getTodo(){
   });
 }
 
-/* function saveKoala(){
-  console.log( 'in saveKoala' );
-  let newKoala = {
-    name: $('#nameIn').val(),
-    age: $('#ageIn').val(),
-    gender: $('#genderIn').val(),
-    ready_to_transfer: $('#readyForTransferIn').val(),
-    notes: $('#notesIn').val()
+function postTodo(){
+  console.log( 'in postTodo' );
+  let newTaskItem = {
+    task: $('#taskIn').val(),
   }
   $.ajax({
     type: 'POST',
-    url: '/koalas',
-    data: newKoala
+    url: '/todo',
+    data: newTaskItem
   }).then((response) => {
-    console.log('POST /koalas succeeded')
-    getKoalas();
+    console.log('POST /todos succeeded')
+    getTodo();
     clearInputs();
   });
 
 }
 
-function deleteKoala( newKoala ){
+/* function deleteKoala( newKoala ){
   console.log( 'in deleteKoala');
   const koalaId = $(this).data('id');
   // ajax call to server to delete koalas
@@ -89,5 +85,5 @@ function updateKoala(){
     getKoalas();
   }).catch((err) => {
     console.log(err);
-  })
-}; // end updateKoala */
+  }) */
+/* }; // end updateKoala */
