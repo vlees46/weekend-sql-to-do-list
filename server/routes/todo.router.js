@@ -68,16 +68,16 @@ koalaRouter.put('/:id', (req, res) => {
     })
 }) */
 
-/* DELETE
-// Bennett was here
-koalaRouter.delete('/:id', (req, res) => {
+// This function deletes an task by using the ID field to locate which task to send to the server to delete
+// 
+todoRouter.delete('/:id', (req, res) => {
   console.log('req.params:', req.params);
-  const koalaId = req.params.id;
+  const taskId = req.params.id;
   const sqlText = `
-    DELETE FROM "koalas"
+    DELETE FROM "tasklist"
       WHERE "id"=$1;
   `;
-  const sqlValues = [ koalaId ];
+  const sqlValues = [ taskId ];
 
   pool.query(sqlText, sqlValues)
     .then((dbResult) => {
@@ -87,6 +87,6 @@ koalaRouter.delete('/:id', (req, res) => {
       console.error(dbErr);
       res.sendStatus(500);
     })
-}); */
+}); 
 
 module.exports =todoRouter;

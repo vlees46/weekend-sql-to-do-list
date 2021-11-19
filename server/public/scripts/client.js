@@ -5,8 +5,8 @@ $( document ).ready( function(){
   // load existing todos on page load
   getTodo();
     // TODO make sure to add class delete-btn, to the remove button.
-  //$('#viewKoalas').on('click', '.delete-btn', deleteKoala);
-  //$('#viewKoalas').on('click', '.update-btn', updateKoala);
+  $('#viewTasks').on('click', '.delete-btn', deleteTask);
+  //$('#viewTasks').on('click', '.update-btn', updateKoala);
   $('#addTaskButton').on('click', postTodo);
 
 }); // end doc ready
@@ -57,23 +57,23 @@ function postTodo(){
   });
 
 }
-
-/* function deleteKoala( newKoala ){
-  console.log( 'in deleteKoala');
-  const koalaId = $(this).data('id');
+// This function will DELETE a TASK from the DATABASE
+ function deleteTask ( newTaskItem ){
+  console.log( 'in deleteTask');
+  const taskId = $(this).data('id');
   // ajax call to server to delete koalas
   $.ajax({
     type: 'DELETE',
-    url: `/koalas/${koalaId}`
+    url: `/todo/${taskId}`
   }).then(function(response) {
     console.log('response', response);
-    // TODO refreshKoalas(); 
-    getKoalas();
+    // TODO refreshTodo(); 
+    getTodo();
   }).catch(function(error) {
     console.log('error: ', error);
   });
 }; // end deleteKoala
-
+/*
 // update the inputs
 function updateKoala(){
   const update = $(this).data('id');

@@ -42,9 +42,9 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] store new task in database
 - [x] re-render DOM
 
-- [ ] delete a task
-- [ ] delete task in database
-- [ ] re-render DOM
+- [x] delete a task
+- [x] delete task in database
+- [x] re-render DOM
 
   * complete a task
     * update task in db
