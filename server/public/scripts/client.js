@@ -26,7 +26,7 @@ function getTodo(){
     for (let todos of response) {
       console.log('in client side of GET', todos);
       
-      $('#viewTasks').append(`
+      /* $('#viewTasks').append(`
       <tr>
         <td>${todos.task}</td>       
            <td>
@@ -38,13 +38,55 @@ function getTodo(){
         <td>${todos.completed}</td>
         
       </tr>
-      `);
+      `); */
       console.log('change color conditional',todos)
       if (todos.completed === "Y"){
-        $('#viewTasks').css("color", "green");
+        
+      //  $('#viewTasks').css("background-color", "green");
+       // $('#task-table').css("color", "green");
+
+       $('#viewTasks').append(`
+       <tr>
+         <td style="background-color:#00FF00" >${todos.task}</td>       
+            <td>
+           <button class="update-btn" data-id="${todos.id}">Completed</button>
+         </td> 
+         <td>
+           <button class="delete-btn" data-id="${todos.id}">Delete</button>
+         </td>        
+         <td>${todos.completed}</td>
+         
+       </tr>
+       `);
+               
       }
-      else if (todos.completed ===  null) {
-      $('td').css("color", "black");
+      else {
+     // $('td').css("color", "black");
+
+     $('#viewTasks').append(`
+     <tr>
+       <td >${todos.task}</td>       
+          <td>
+         <button class="update-btn" data-id="${todos.id}">Completed</button>
+       </td> 
+       <td>
+         <button class="delete-btn" data-id="${todos.id}">Delete</button>
+       </td>        
+       <td>${todos.completed}</td>
+       
+     </tr>
+     `);
+
+
+
+
+
+
+
+
+
+
+
       }  
     }
    

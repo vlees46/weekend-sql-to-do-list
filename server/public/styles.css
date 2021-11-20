@@ -31,9 +31,7 @@ table {
     display: inline-block;
     border-collapse: collapse;
     background-color: #d2d6d6;
-    animation-name: fadeIn;
-    animation-duration: 4.5s;
-    animation-fill-mode: both;
+    
 }
 table, th, td {
     border: 1px solid #606161;
