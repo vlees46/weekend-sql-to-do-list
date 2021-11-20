@@ -24,20 +24,33 @@ function getTodo(){
     $('#viewTasks').empty();
     console.log("GET /todos response", response);
     for (let todos of response) {
+      console.log('in client side of GET', todos);
+      
       $('#viewTasks').append(`
       <tr>
-        <td>${todos.task}</td>
-        <td>${todos.completed}</td>
+        <td>${todos.task}</td>       
            <td>
           <button class="update-btn" data-id="${todos.id}">Completed</button>
         </td> 
         <td>
           <button class="delete-btn" data-id="${todos.id}">Delete</button>
         </td>        
+        <td>${todos.completed}</td>
+        
       </tr>
       `);
+      console.log('change color conditional',todos)
+      if (todos.completed === "Y"){
+        $('#viewTasks').css("color", "green");
+      }
+      else if (todos.completed ===  null) {
+      $('td').css("color", "black");
+      }  
     }
+   
   });
+
+  
 }
 
 function postTodo(){
@@ -75,14 +88,17 @@ function postTodo(){
 
 // update the complete tasks
 function updateComplete(){
-  const update = $(this).data('id');
-  $.ajax({
-    method: 'PUT',
-    url: `/todo/${update}`    
-  }).then(function(response) {
-    console.log(response);
-    getTodo();
-  }).catch(function(error) {
-    console.log(error);
-  }) ;
- }; // end updateComplete
+    const update = $(this).data('id');
+    $.ajax({
+      type: 'PUT',
+      url: `/todo/${update}`
+    }).then((res) => {
+      console.log(res);
+      getTodo();
+     // docolorchange();
+    }).catch((err) => {
+      console.log(err);
+    })
+  }; // end updateKoala
+
+  

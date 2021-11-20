@@ -54,7 +54,7 @@ todoRouter.put('/:id', (req, res) => {
   const sqlText = `
   UPDATE "tasklist"
   SET "completed"=$1
-  WHERE "id"=$2
+  WHERE "id"=$2;
   `;
   const sqlValues = [
     completed,
@@ -62,8 +62,10 @@ todoRouter.put('/:id', (req, res) => {
   ]
   pool.query(sqlText, sqlValues)
     .then((dbRes) => {
+      console.log('\todo PUT succeeded.');
       res.sendStatus(201);
     }).catch((dbErr) => {
+      console.log(`\todo PUT failed. ${sqlText} ${sqlValues}`);
       res.sendStatus(500);
     })
 });
