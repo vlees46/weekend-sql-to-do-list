@@ -15,7 +15,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 
 <p align="center">
-  <img src="/server/public/images/TodoScreen.PNG" width="500" height="500 title="hover text">
+  <img src="/server/public/images/TodoScreen.PNG" width="800" height="500 title="hover text">
 
 # High Level Check List
 
