@@ -1,29 +1,33 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+To Do Application
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+
+The goal of this To Do applcation is to be all ow a user to track a list of To Do's. The user can use any type of To Do's as an example a list of things to get done around the house. 
+Such as Wash the dishes and Take out the trash.  The To Do Application will be able to track the progress of tasks being completed and or if they have not.  Providing the user the ability
+to track what has been completed and what has not.
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
+## Screen Shot:  To Do Application
+![Screenshot To Do Application](server\public\images\Screenshot.PNG).
+![Screenshot To Do Application](server\public\images\TodoScreen.PNG).
 
 # High Level Check List
-# INITIALIZING STUFF:
 
-  * Think through table structure.
-    -- Actually make some CREATE TABLE statements.
-  * Make a new git branch for "initializing" stuff.
+## INITIALIZING STUFF:
 
  - [x]  Add files and folders to project directory.
  - [x]  Don't forget .gitignore!
 
-  ##### Front-End:
-  - [x]  Mock up the basic HTML
-  - [x]  Source CSS and JS files
+#### Front-End:
 
-  ##### Back-End:
+- [x]  Mock up the basic HTML
+- [x]  Source CSS and JS files
+
+#### Back-End:
  - [x] run npm init
  - [x] make sure "start" script exists in our package.json
  - [x] npm install the stuff we need
@@ -32,32 +36,20 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
  - [x] use Postico to make a database
  - [x] use Postico to create "todos" table
  - [x] implement minimum code for working Express server in server.js
- - [x]    * wire up database connection in pool.js file
-
----
+ - [x] wire up database connection in pool.js file
 
 # FEATURES
 
 - [x] create a task
 - [x] store new task in database
 - [x] re-render DOM
-
 - [x] delete a task
 - [x] delete task in database
 - [x] re-render DOM
+- [x] complete a task Front - End
+    - [x] background of the task container could change from gray to green
+    - [x] The complete option should be  'checked off'
+- [x] complete a task Back -End
+    - [x] Whether or not a Task is complete should also be stored in the database
 
-- [ ] complete a task Front - End
-    - [ ] background of the task container could change from gray to green
-    - [ ] The complete option should be  'checked off'
-- [ ] complete a task Back -End
-    - [ ] Whether or not a Task is complete should also be stored in the database
-
-
-    * update task in db
-    * should be "checked off"
-    * CSS to differentiate
-    * re-render DOM
-
-    For example, the background of the task container could change from gray to green. The complete option should be  'checked off'. Each of these are accomplished in CSS, but will need to hook into logic to know whether or not the task is complete.
-
-  * CSS! make it purdy
+    
