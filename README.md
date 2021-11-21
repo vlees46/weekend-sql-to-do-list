@@ -12,8 +12,10 @@ to track what has been completed and what has not.
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
 ## Screen Shot:  To Do Application
-![Screenshot To Do Application](server\public\images\Screenshot.PNG).
-![Screenshot To Do Application](server\public\images\TodoScreen.PNG).
+
+
+<p align="center">
+  <img src="/server/public/images/TodoScreen.PNG" width="350" title="hover text">
 
 # High Level Check List
 
