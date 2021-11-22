@@ -6,13 +6,11 @@ $( document ).ready( function(){
   $('#viewTasks').on('click', '.delete-btn', deleteTask);
   $('#viewTasks').on('click', '.update-btn', updateComplete);
   $('#addTaskButton').on('click', postTodo);
-
 }); // end doc ready
 
-// clear koalaInputs
+// clear Inputs
 function clearInputs(){
   $('#taskIn').val('');
-
 }
 
 function getTodo(){ 
@@ -58,7 +56,7 @@ function getTodo(){
          
        </tr>
        `);
-               
+              
       }
       else {
      // $('td').css("color", "black");
@@ -76,23 +74,10 @@ function getTodo(){
        
      </tr>
      `);
-
-
-
-
-
-
-
-
-
-
-
       }  
     }
    
   });
-
-  
 }
 
 function postTodo(){
@@ -142,5 +127,4 @@ function updateComplete(){
       console.log(err);
     })
   }; // end updateKoala
-
   
